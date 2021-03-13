@@ -17,6 +17,11 @@ def get_url_list(prefix, curr_suffix, n_jump, headers):
                 suffix2store_list.append(temp)
                 f.write(temp + '\n')
 
+                creal([temp], headers, 'log.txt', 'a')
+
+
+
+
             next_suffix = soup.find(name="li", attrs={"class": "b-plainlist__item", 'data-next': True})['data-next']
 
             if next_suffix:
@@ -28,14 +33,13 @@ def get_url_list(prefix, curr_suffix, n_jump, headers):
     return suffix2store_list
 
 
-def creal(url_list, headers, output_name):
-    with open(output_name, 'w', encoding='utf-8') as f:
+def creal(url_list, headers, output_name, mod):
+    with open(output_name, mod, encoding='utf-8') as f:
         for i in tqdm(range(len(url_list)), desc='writing'):
             print(url_list[i])
             try:
                 r = requests.get(url_list[i], headers=headers)
                 soup = BeautifulSoup(r.text, "html.parser")
-                #                 print(soup)
                 articlBody = soup.find_all(name='div', attrs={'itemprop': 'articleBody', 'class': 'b-article__text'})
                 print('aa ', len(articlBody))
 
@@ -65,4 +69,4 @@ if __name__ == '__main__':
         with open('./url_list.txt', 'r', encoding='utf-8') as f:
             url_list = [url.strip('\n') for url in f.readlines()]
 
-    creal(url_list, headers, 'data.txt')
+    creal(url_list, headers, 'data.txt', 'w')

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="songpeng@10.26.6.97:22" remoteFilesAllowedToDisappearOnAutoupload="false" autoUploadExternalChanges="true">
+  <component name="PublishConfigData" autoUpload="Always" serverName="10.26.6.97" remoteFilesAllowedToDisappearOnAutoupload="false" autoUploadExternalChanges="true">
     <serverData>
-      <paths name="songpeng@10.26.6.97:22">
+      <paths name="10.26.6.97">
         <serverdata>
           <mappings>
-            <mapping deploy="/data/songpeng/CrawlALL" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/data/songpeng/my_project/crawl_all" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>

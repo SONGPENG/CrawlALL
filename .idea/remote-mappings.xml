@@ -10,6 +10,13 @@
             </list>
           </settings>
         </remote-mappings>
+        <remote-mappings server-id="python@sftp://songpeng@10.26.6.97:22/data/songpeng/.conda/envs/pytorch/bin/python">
+          <settings>
+            <list>
+              <mapping local-root="$PROJECT_DIR$" remote-root="/data/songpeng/my_project/crawl_all" />
+            </list>
+          </settings>
+        </remote-mappings>
       </list>
     </list>
   </component>
